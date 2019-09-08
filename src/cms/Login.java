@@ -219,31 +219,31 @@ public class Login extends javax.swing.JFrame {
           if (rs.next()){
              //this.hide();
               System.out.println(",n,");
-             String sql3= "select * from users where UserName= '" + user.getText() + "' and Status ='Doctor'";
+             String sql3= "select * from users where UserName= '" + user.getText() + "' and Status ='Admin'";
              pst=con.prepareStatement(sql3);
           rs= pst.executeQuery();
           if (rs.next()){
               this.hide();
-             MainMenuDoctor frm=new MainMenuDoctor();
+             MainMenuAdmin frm=new MainMenuAdmin();
                 frm.setVisible(true);
           }
-          String sql4= "select * from users where UserName= '" + txtUserName.getText() + "' and Status ='Admin'";
+          String sql4= "select * from users where UserName= '" + user.getText() + "' and Status ='Cashier'";
              pst=con.prepareStatement(sql4);
           rs= pst.executeQuery();
           if (rs.next()){
               this.hide();
-             MainMenuUser frm=new MainMenuUser();
+             MainMenuCashier frm=new MainMenuCashier();
                 frm.setVisible(true);
           }
-           String sql5= "select * from users where UserName= '" + txtUserName.getText() + "' and Status ='Cashier'";
+           String sql5= "select * from users where UserName= '" + user.getText() + "' and Status ='Manager'";
              pst=con.prepareStatement(sql5);
           rs= pst.executeQuery();
           if (rs.next()){
               this.hide();
-             MainMenuBill frm=new MainMenuBill();
+             MainMenuManager frm=new MainMenuManager();
                 frm.setVisible(true);
           } 
-           String sql6= "select * from users where UserName= '" + txtUserName.getText() + "' and Status ='User'";
+           String sql6= "select * from users where UserName= '" + user.getText() + "' and Status ='User'";
              pst=con.prepareStatement(sql6);
           rs= pst.executeQuery();
           if (rs.next()){
