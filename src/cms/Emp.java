@@ -48,7 +48,7 @@ public String id;
         txtContactNo = new javax.swing.JTextField();
         txtEmailID = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        cmbGender = new javax.swing.JComboBox();
+        cmbType = new javax.swing.JComboBox();
         jPanel2 = new javax.swing.JPanel();
         btnNew = new javax.swing.JButton();
         btnSave = new javax.swing.JButton();
@@ -57,8 +57,12 @@ public String id;
         jButton1 = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
         txtUserName = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jLabel1 = new javax.swing.JLabel();
+        txtSalary = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Doctor");
@@ -69,26 +73,31 @@ public String id;
         jPanel1.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(39, 84, 70, 17);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Address");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(40, 130, 80, 17);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Contact No.");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(40, 180, 100, 17);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Email ID");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(40, 220, 80, 17);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Date Of Joining");
         jPanel1.add(jLabel10);
         jLabel10.setBounds(40, 310, 110, 20);
@@ -116,13 +125,14 @@ public String id;
         txtEmailID.setBounds(200, 210, 210, 20);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setText("Gender");
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("EMP Type");
         jPanel1.add(jLabel11);
         jLabel11.setBounds(40, 270, 80, 17);
 
-        cmbGender.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Skilled", "Unskilled" }));
-        jPanel1.add(cmbGender);
-        cmbGender.setBounds(200, 260, 100, 20);
+        cmbType.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Skilled", "Unskilled", "Temp" }));
+        jPanel1.add(cmbType);
+        cmbType.setBounds(200, 260, 100, 20);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
@@ -202,12 +212,33 @@ public String id;
         jLabel12.setBounds(520, 260, 0, 0);
 
         txtUserName.setToolTipText("");
+        txtUserName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUserNameActionPerformed(evt);
+            }
+        });
         jPanel1.add(txtUserName);
         txtUserName.setBounds(580, 290, 40, 20);
-        jPanel1.add(jLabel13);
-        jLabel13.setBounds(10, 20, 1180, 640);
         jPanel1.add(jDateChooser1);
         jDateChooser1.setBounds(200, 310, 91, 20);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Salary");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(40, 370, 90, 17);
+        jPanel1.add(txtSalary);
+        txtSalary.setBounds(200, 360, 80, 20);
+
+        jLabel3.setText("Per day");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(290, 360, 50, 20);
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(10, 30, 0, 0);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cms/img/emp.jpg"))); // NOI18N
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(10, 20, 670, 430);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -215,15 +246,15 @@ public String id;
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1193, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 696, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 660, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         pack();
@@ -240,7 +271,7 @@ private void Reset()
     txtSpecialisation.setText("");
     txtDateOfJoining.setText("");
     cmbBloodGroup.setSelectedIndex(-1);
-    cmbGender.setSelectedIndex(-1);
+    cmbType.setSelectedIndex(-1);
     btnSave.setEnabled(true);
     btnUpdate.setEnabled(false);
     btnDelete.setEnabled(false);
@@ -290,7 +321,7 @@ public String getid(){
                 JOptionPane.showMessageDialog( this, "Please enter specialization","Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
-             if (cmbGender.getSelectedItem().equals("")) {
+             if (cmbType.getSelectedItem().equals("")) {
                 JOptionPane.showMessageDialog( this, "Please select gender","Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
@@ -313,7 +344,7 @@ public String getid(){
         txtDoctorID.requestDefaultFocus();
        return;
       }
-            String sql= "insert into Doctor(DoctorID,Doctorname,FatherName,Email,ContactNo,Qualifications,Specialization,Gender,BloodGroup,DateOfJoining,Address,username)values('"+ txtDoctorID.getText() + "','"+ txtDoctorName.getText() + "','"+ txtFathername.getText() + "','"+ txtEmailID.getText() + "','"+ txtContactNo.getText() + "','"+ txtQualifications.getText() + "','"+ txtSpecialisation.getText() + "','" + cmbGender.getSelectedItem() + "','"+ cmbBloodGroup.getSelectedItem() + "','" + txtDateOfJoining.getText() + "','" + txtAddress.getText() + "','')";
+            String sql= "insert into Doctor(DoctorID,Doctorname,FatherName,Email,ContactNo,Qualifications,Specialization,Gender,BloodGroup,DateOfJoining,Address,username)values('"+ txtDoctorID.getText() + "','"+ txtDoctorName.getText() + "','"+ txtFathername.getText() + "','"+ txtEmailID.getText() + "','"+ txtContactNo.getText() + "','"+ txtQualifications.getText() + "','"+ txtSpecialisation.getText() + "','" + cmbType.getSelectedItem() + "','"+ cmbBloodGroup.getSelectedItem() + "','" + txtDateOfJoining.getText() + "','" + txtAddress.getText() + "','')";
                 //id=Integer.valueOf(txtDoctorID.getText());
             pst=con.prepareStatement(sql);
             pst.execute();
@@ -358,7 +389,7 @@ public String getid(){
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         try{
             con=Connect.ConnectDB();
-            String sql= "update Doctor set Doctorname='"+ txtDoctorName.getText() + "',FatherName='"+ txtFathername.getText() + "',Email='"+ txtEmailID.getText() + "',ContactNo='"+ txtContactNo.getText() + "',Qualifications='"+ txtQualifications.getText() + "',Specialization='"+ txtSpecialisation.getText() + "',Gender='" + cmbGender.getSelectedItem() + "',BloodGroup='"+ cmbBloodGroup.getSelectedItem() + "',DateOfJoining='" + txtDateOfJoining.getText() + "',Address='" + txtAddress.getText() + "' where DoctorID='" + txtDoctorID.getText() + "'";
+            String sql= "update Doctor set Doctorname='"+ txtDoctorName.getText() + "',FatherName='"+ txtFathername.getText() + "',Email='"+ txtEmailID.getText() + "',ContactNo='"+ txtContactNo.getText() + "',Qualifications='"+ txtQualifications.getText() + "',Specialization='"+ txtSpecialisation.getText() + "',Gender='" + cmbType.getSelectedItem() + "',BloodGroup='"+ cmbBloodGroup.getSelectedItem() + "',DateOfJoining='" + txtDateOfJoining.getText() + "',Address='" + txtAddress.getText() + "' where DoctorID='" + txtDoctorID.getText() + "'";
 
            pst=con.prepareStatement(sql);
             pst.execute();
@@ -393,6 +424,10 @@ public String getid(){
         txtDoctorID.setVisible(false);
     }//GEN-LAST:event_txtDoctorIDActionPerformed
 
+    private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUserNameActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -409,17 +444,20 @@ public String getid(){
     private javax.swing.JButton btnNew;
     public javax.swing.JButton btnSave;
     public javax.swing.JButton btnUpdate;
-    public javax.swing.JComboBox cmbGender;
+    public javax.swing.JComboBox cmbType;
     private javax.swing.JButton jButton1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     public javax.swing.JTextField txtAddress;
@@ -427,6 +465,7 @@ public String getid(){
     public javax.swing.JTextField txtDoctorID;
     public javax.swing.JTextField txtDoctorName;
     public javax.swing.JTextField txtEmailID;
+    private javax.swing.JTextField txtSalary;
     public javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
 }
