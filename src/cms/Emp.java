@@ -27,6 +27,7 @@ public String id;
         initComponents();
         setLocationRelativeTo(null);
         txtUserName.setVisible(false);
+        txtDoctorID.setVisible(false);
         
  
     }
@@ -263,19 +264,20 @@ private void Reset()
 {
     txtDoctorID.setText("");
     txtDoctorName.setText("");
-    txtFathername.setText("");
+    
     txtContactNo.setText("");
     txtAddress.setText("");
-    txtQualifications.setText("");
+    
     txtEmailID.setText("");
-    txtSpecialisation.setText("");
-    txtDateOfJoining.setText("");
-    cmbBloodGroup.setSelectedIndex(-1);
+    
+    //jDateChooser1.setText("");
+    cmbType.setSelectedIndex(-1);
     cmbType.setSelectedIndex(-1);
     btnSave.setEnabled(true);
     btnUpdate.setEnabled(false);
     btnDelete.setEnabled(false);
     txtDoctorID.requestDefaultFocus();
+    
     
 
 }
@@ -421,7 +423,7 @@ public String getid(){
 
     private void txtDoctorIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDoctorIDActionPerformed
         // TODO add your handling code here:
-        txtDoctorID.setVisible(false);
+        
     }//GEN-LAST:event_txtDoctorIDActionPerformed
 
     private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
