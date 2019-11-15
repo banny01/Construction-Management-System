@@ -63,42 +63,36 @@ public String id;
         txtSalary = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Doctor");
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 204, 153));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Employer Details", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14))); // NOI18N
         jPanel1.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(39, 84, 70, 17);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Address");
         jPanel1.add(jLabel4);
         jLabel4.setBounds(40, 130, 80, 17);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Contact No.");
         jPanel1.add(jLabel5);
         jLabel5.setBounds(40, 180, 100, 17);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Email ID");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(40, 220, 80, 17);
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Date Of Joining");
         jPanel1.add(jLabel10);
         jLabel10.setBounds(40, 310, 110, 20);
@@ -126,7 +120,6 @@ public String id;
         txtEmailID.setBounds(200, 210, 210, 20);
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("EMP Type");
         jPanel1.add(jLabel11);
         jLabel11.setBounds(40, 270, 80, 17);
@@ -224,7 +217,6 @@ public String id;
         jDateChooser1.setBounds(200, 310, 91, 20);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Salary");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(40, 370, 90, 17);
@@ -236,10 +228,6 @@ public String id;
         jLabel3.setBounds(290, 360, 50, 20);
         jPanel1.add(jLabel7);
         jLabel7.setBounds(10, 30, 0, 0);
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cms/img/emp.jpg"))); // NOI18N
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(10, 20, 670, 430);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -459,7 +447,6 @@ public String getid(){
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     public javax.swing.JTextField txtAddress;
